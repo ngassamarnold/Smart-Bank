@@ -1,4 +1,5 @@
 
 export default {
-    // LOGO: require('../assets/logo/appcan.png'),
+    BANK: require('../assets/bank_loading.json'),
+    BANK_CARD: require('../assets/bank-account.json'),
 };
