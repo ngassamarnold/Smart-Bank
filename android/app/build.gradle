@@ -205,6 +205,8 @@ dependencies {
         exclude group:'com.facebook.fbjni'
     }
 
+    implementation project(':lottie-react-native')
+
     implementation project(':react-native-vector-icons')
 
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
