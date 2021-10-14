@@ -11,9 +11,10 @@ export default function Splash({ navigation }) {
       source={images.BANK}
       autoPlay
       loop={false}
-    // onAnimationFinish={() => NavigationService.goTo(navigation, 'Login')}
+      onAnimationFinish={() => NavigationService.goTo(navigation, 'Welcome')}
     />
   );
 }
+
 
 

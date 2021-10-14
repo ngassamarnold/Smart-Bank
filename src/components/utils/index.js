@@ -37,7 +37,7 @@ const Center = styled.View`
 `;
 
 const Content = styled.SafeAreaView`
-    background-color:${props => props.bg || colors.lightwhites};
+    background-color:${props => props.bg || colors.w};
     flex:1;
     justify-content: center;
 `;
@@ -45,9 +45,9 @@ const Content = styled.SafeAreaView`
 const TextTitle = styled.Text`
     font-size: ${props => props.size || 30}px;
     fontWeight: bold;
-    color: ${props => props.colorTitle || colors.white};
+    color: ${props => props.color || colors.white};
     margin-left:${props => props.left || 0}px;
-    text-align: ${props => props.position || 'left'};
+    text-align: ${props => props.position || 'center'};
   `;
 
 
@@ -56,9 +56,19 @@ const BR = styled.View`
   background-color:${colors.red};
 `;
 
+const ContentVariable = styled.View`
+  width:${props => props.width || '80%'};
+`;
+
+const DivFlex = styled.View`
+  flex: ${props => props.flex || 1};
+  justify-content:${props => props.jc || 'flex-start'};
+
+`;
+
 const ContentButton = styled.View`
   justify-content:flex-end;
-  /* flex:${props => props.flex || .05}; */
+  flex:${props => props.flex || 1};
   background-color: ${props => props.bg || colors.red};
 `;
 const FlexDirection = styled.View`
@@ -72,4 +82,4 @@ const FlatList = styled.FlatList.attrs(props => ({ keyboardShouldPersistTaps: 'a
 `;
 
 
-export { SrollVIew, FlatList, Center, Content, TextBold, BR, Row, FlexDirection, TextTitle, ContentButton, Text };
+export { SrollVIew, FlatList, Center, DivFlex, Content, TextBold, BR, Row, FlexDirection, TextTitle, ContentButton, Text, ContentVariable };
