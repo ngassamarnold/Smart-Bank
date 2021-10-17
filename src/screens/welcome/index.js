@@ -5,7 +5,7 @@ import { Center, Content, ContentButton, ContentVariable, DivFlex, Text, TextTit
 import CreditCard from '@components/Circle';
 import Button from '@components/buttons';
 
-export default function Welcome({ navigation }) {
+export default function Welcome({ navigation: { navigate } }) {
 
 
     return (
@@ -28,7 +28,7 @@ export default function Welcome({ navigation }) {
                     <ContentButton>
                         <Center>
                             <Button
-                                // onPress={() => CheckInfo()}
+                                onPress={() => navigate('Home')}
                                 width="70%"
                                 title="Sign In"
                                 borderColor={colors.white}
