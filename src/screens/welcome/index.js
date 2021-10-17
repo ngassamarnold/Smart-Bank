@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import colors from '@constants/colors';
 import { Center, Content, ContentButton, ContentVariable, DivFlex, Text, TextTitle } from '@components/utils';
-import CreditCard from '@components/Circle';
+import Circle from '@components/Circle';
 import Button from '@components/buttons';
 
 export default function Welcome({ navigation: { navigate } }) {
@@ -11,7 +11,7 @@ export default function Welcome({ navigation: { navigate } }) {
     return (
         <Content >
             <DivFlex flex={1} color={colors.white}>
-                <CreditCard />
+                <Circle />
             </DivFlex>
             <DivFlex flex={1.5} jc="center" color={colors.white} >
                 <Center>

@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, StyleProp, ViewStyle } from "react-native";
 
-const circleSize = 250;
+const circleSize = 280;
 export default function CreditCard({
   name,
   date,
   suffix,
   style,
+  type,
   textColor = "white",
   bgColor = "#0047cc"
 }: {
@@ -14,6 +15,7 @@ export default function CreditCard({
   date: string;
   suffix: number | string;
   style?: StyleProp<ViewStyle>;
+  type:string,
   textColor?: string;
   bgColor?: string;
 }) {
@@ -25,6 +27,10 @@ export default function CreditCard({
       <View style={s.logoContainer}>
         <View style={[s.circle, s.leftCircle]} />
         <View style={[s.circle, s.rightCircle]} />
+        <View style={ s.type}>
+          <Text style={[s.text, { color: textColor }]}>{type}</Text>
+        </View>
+
       </View>
       <View style={s.cardNumberContainer}>
         <View style={s.cardNumberPart}>
@@ -60,12 +66,14 @@ const s = StyleSheet.create({
     padding: 24,
     paddingTop: 40,
     borderRadius: 12,
-    width: 290,
-    position: "relative"
+    width: "90%",
+    position: "relative",
+    height: 190,
   },
   logoContainer: { position: "relative", marginBottom: 24 },
   circle: { width: 34, height: 34, borderRadius: 17 },
   rightCircle: { backgroundColor: "#f9a000", position: "absolute", left: 20 },
+  type: {  position: "absolute", left: 70,top:5 },
   leftCircle: { backgroundColor: "#ed0006", zIndex: 999 },
   cardNumberContainer: {
     flexDirection: "row",
