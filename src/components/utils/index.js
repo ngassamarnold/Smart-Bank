@@ -37,7 +37,7 @@ const Center = styled.View`
 `;
 
 const Content = styled.SafeAreaView`
-    background-color:${props => props.bg || colors.w};
+    background-color:${props => props.bg || colors.white};
     flex:1;
     justify-content: center;
 `;
