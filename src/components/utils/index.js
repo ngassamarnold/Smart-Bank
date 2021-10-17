@@ -39,7 +39,7 @@ const Center = styled.View`
 const Content = styled.SafeAreaView`
     background-color:${props => props.bg || colors.white};
     flex:1;
-    justify-content: center;
+    justify-content:${props => props.jc || 'center'};
 `;
 
 const TextTitle = styled.Text`
