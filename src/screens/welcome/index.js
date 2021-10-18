@@ -28,7 +28,7 @@ export default function Welcome({ navigation: { navigate } }) {
                     <ContentButton>
                         <Center>
                             <Button
-                                onPress={() => navigate('Home')}
+                                onPress={() => navigate('Tabs')}
                                 width="70%"
                                 title="Sign In"
                                 borderColor={colors.white}
