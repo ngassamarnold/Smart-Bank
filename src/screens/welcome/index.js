@@ -4,14 +4,18 @@ import colors from '@constants/colors';
 import { Center, Content, ContentButton, ContentVariable, DivFlex, Text, TextTitle } from '@components/utils';
 import Circle from '@components/Circle';
 import Button from '@components/buttons';
+import { Picture } from '@components/images';
+import images from '@constants/images';
 
 export default function Welcome({ navigation: { navigate } }) {
 
 
     return (
         <Content >
-            <DivFlex flex={1} color={colors.white}>
-                <Circle />
+            <DivFlex flex={1} alignItems='flex-end' color={colors.white}>
+                {/* <Circle /> */}
+                <Picture width={312} height={252} src={images.LARGE_LOGO} />
+
             </DivFlex>
             <DivFlex flex={1.5} jc="center" color={colors.white} >
                 <Center>
