@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '@screens/splash';
 import Welcome from '@screens/welcome';
 import Home from '@screens/home';
+import Tabs from '@navigation/TabsNavigation';
 
 const settings = {
   initialRouteName: 'Splash',
@@ -18,6 +19,7 @@ const nodes = [
   { name: 'Splash', screen: Splash },
   { name: 'Welcome', screen: Welcome },
   { name: 'Home', screen: Home },
+  { name: 'Tabs', screen: Tabs },
 ];
 
 const Stack = createNativeStackNavigator();
