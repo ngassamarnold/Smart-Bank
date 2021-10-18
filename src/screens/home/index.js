@@ -5,6 +5,7 @@ import { BR, Center, Content, ContentButton, ContentVariable, DivFlex, FlexDirec
 import CreditCard from '@components/CreditCard';
 import Button from '@components/buttons';
 import { SwitchInput } from '@components/switchInput';
+import Header from '@components/header';
 
 export default function Welcome({ navigation }) {
     const [isEnabled, setIsEnabled] = useState(false);
@@ -12,8 +13,10 @@ export default function Welcome({ navigation }) {
 
     return (
         <Content jc="flex-start">
+            <Header
+            title="Cards"/>
             <SrollVIew>
-                <BR val="2" />
+                <BR />
                 <TextTitle position="left" left={15} size={15} color={colors.black} > Virtual Card </TextTitle>
                 <BR />
                 <Center>
