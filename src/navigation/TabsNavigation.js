@@ -29,57 +29,47 @@ export default function TabsNavigator() {
 
     return (
         <Tab.Navigator
-            style={{
-                height: 160,
-                paddingBottom: 8,
-                borderRadius: 7,
-                backgroundColor: colors.white,
-                justifyContent: 'center',
-            }}
+
             screenOptions={({ route }) => ({
                 headerShown: false,
                 tabBarActiveTintColor: colors.yellow,
                 tabBarInactiveTintColor: colors.gray,
-
                 tabBarIcon: ({ focused, color }) => {
                     let iconName;
                     let type;
                     switch (route.name) {
                         case 'HomeTab':
                             type = 'Ionicons';
-                            iconName = focused ? 'md-card-outline' : 'md-card-outline';
+                            iconName = focused ? 'ios-home' : 'ios-home-outline';
                             break;
                         case 'HomeTabs':
                             type = 'Ionicons';
                             iconName = focused ? 'md-card-outline' : 'md-card-outline';
                             break;
-                        // case 'SettingsTab':
-                        //     if (user) {
-                        //         if (user.profile_picture) {
-                        //             return <Thumbnail small source={{ uri: USER_PICTURE }} />;
-                        //         }
-                        //     }
-                        //     type = 'MaterialCommunityIcons';
-                        //     iconName = focused ? 'account-circle' : 'account-circle-outline';
-                        //     break;
+                        case 'Plus':
+                            return <Icon name="add-circle" type="Ionicons" style={{ color: colors.yellow, fontSize: 72, marginTop: -20, }} />;
+                        case 'Messges':
+                            type = 'MaterialCommunityIcons';
+                            iconName = focused ? 'ios-chatbubble' : 'ios-chatbubble-outline';
+                            break;
+                        case 'Setting':
+                            type = 'Ionicons';
+                            iconName = focused ? 'settings' : 'settings-outline';
+                            break;
+
                     }
                     return <Icon name={iconName} type={type} style={{ color: color, fontSize: 28, marginTop: 5 }} />;
                 },
             })}
-        // tabBarOptions={{
-        //     activeTintColor: colors.yellow,
-        //     inactiveTintColor: colors.gray,
-        //     style: {
-        //         height: 60,
-        //         paddingBottom: 8,
-        //         borderRadius: 7,
-        //         backgroundColor: colors.white,
-        //         justifyContent: 'center',
-        //     },
-        // }}
+            tabBarOptions={{
+                showLabel: false,
+            }}
         >
-            <Tab.Screen name="HomeTab" component={HomeStackScreen} options={{ tabBarLabel: 'Card' }} />
-            <Tab.Screen name="HomeTabs" component={HomeStackScreen} options={{ tabBarLabel: 'Home' }} />
+            <Tab.Screen name="HomeTab" component={HomeStackScreen} />
+            <Tab.Screen name="HomeTabs" component={HomeStackScreen} />
+            <Tab.Screen name="Plus" component={HomeStackScreen} />
+            <Tab.Screen name="Messges" component={HomeStackScreen} />
+            <Tab.Screen name="Setting" component={HomeStackScreen} />
 
         </Tab.Navigator>
     );
