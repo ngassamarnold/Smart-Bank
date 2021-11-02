@@ -63,7 +63,7 @@ const ContentVariable = styled.View`
 const DivFlex = styled.View`
   flex: ${props => props.flex || 1};
   justify-content:${props => props.jc || 'flex-start'};
-
+  background-color:${props => props.bg || colors.white};
 `;
 
 const ContentButton = styled.View`
