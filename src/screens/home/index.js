@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import colors from '@constants/colors';
-import { BR, Center, Content, ContentButton, ContentVariable, DivFlex, FlexDirection, Row, SrollVIew, Text, TextTitle } from '@components/utils';
+import { BR, Center, Content, DivFlex, Row, SrollVIew, TextTitle } from '@components/utils';
 import CreditCard from '@components/CreditCard';
-import Button from '@components/buttons';
 import { SwitchInput } from '@components/switchInput';
 import Header from '@components/header';
 
-export default function Welcome({ navigation }) {
+export default function Home({ navigation }) {
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 

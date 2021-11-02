@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import colors from '@constants/colors';
 import HomeScreen from '@screens/home';
+import AccountScreen from '@screens/account';
 
 
 const settingsStack = createNativeStackNavigator();
@@ -42,7 +43,7 @@ export default function TabsNavigator() {
                             type = 'Ionicons';
                             iconName = focused ? 'ios-home' : 'ios-home-outline';
                             break;
-                        case 'HomeTabs':
+                        case 'AccountScreen':
                             type = 'Ionicons';
                             iconName = focused ? 'md-card-outline' : 'md-card-outline';
                             break;
@@ -66,7 +67,7 @@ export default function TabsNavigator() {
             }}
         >
             <Tab.Screen name="HomeTab" component={HomeStackScreen} />
-            <Tab.Screen name="HomeTabs" component={HomeStackScreen} />
+            <Tab.Screen name="AccountScreen" component={AccountScreen} />
             <Tab.Screen name="Plus" component={HomeStackScreen} />
             <Tab.Screen name="Messges" component={HomeStackScreen} />
             <Tab.Screen name="Setting" component={HomeStackScreen} />
